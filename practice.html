@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main{
+      width: 800px;
+      display: grid;
+      grid-template-areas: 
+      "main-div1 main-div2"
+      "main-div3 main-div4";
+      border: 2px solid red;
+    }
+    
+    @media screen  and (max-width:576px) {
+      .main{
+        grid-template-areas: 
+      "main-div1"
+      "main-div2"
+      "main-div3"
+      "main-div4"
+      }
+    }
+    .main-div1
+    {grid-area: main-div1;}
+    .main-div2
+    {grid-area: main-div2;}
+    .main-div3
+    {grid-area: main-div3;}
+    .main-div4
+    {grid-area: main-div4;}
+    .main-img1{
+      grid-area: img1;
+      width: auto;
+    }
+    .main-img2{
+      grid-area: img2;
+            width: auto;
+
+    }
+    .main-img3{
+      grid-area: img3;
+            width: auto;
+
+    }
+    .main-img4{
+      grid-area: img4;
+            width: auto;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+        <div class="main-img">
+          <div class="main-div1"><img  src="images/team1.png" alt=""></div>
+        <div class="main-div2"><img class="main-img2" src="images/team2.png" alt=""></div>
+          <div class="main-div3"><img class="main-img3" src="images/team3.png" alt=""></div>
+            <div class="main-div4"><img class="main-img4" src="images/team4.png" alt=""></div>
+        
+        </div>
+</body>
+</html>

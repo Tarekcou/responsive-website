@@ -1,6 +1,9 @@
 *{
   margin: 0;
 }
+:root{
+  --primary-color: #FF900E;
+}
 .primary-text-color{
   font-weight: 800;
 }
@@ -26,6 +29,7 @@
  font-weight: 800;
 
 }
+
 #quick-span{
     color: #424242;
     font-weight: 400;
@@ -87,99 +91,71 @@
   text-align: center;
 }
 
-@media screen and (max-width:576px) {
-  .btn-primary{
-    width: 120px;
-    height: 40px;
-    font-size: .75rem;
-  }
-  .nav {
-    width: auto;
-    flex-direction: column;
-  }
-  .banner-content h1,.nav-heading{
-    max-width: 80%;
-    font-size: 2rem;
-    
-  }
-  .banner-p{
-    font-size: .8rem;
-  }
-  .banner-img{
-    width: auto;
-    margin: 0;
-  }
-  .banner-content{
-    max-width: 300px;
-  }
-  .banner-img{
-    max-width: 80%;
-  }
-  .main{
-    /* grid-template-areas:
-        "img1"
-        "img2" 
-        "img3" 
-        "img4" 
-        "main-content"; */
-  grid-template-rows: repeat(4,1fr);
-  grid-template-columns: repeat(1,1fr);
-    border: 1px solid red;
-  }
-  .main-img{
-    width: auto;
-  }
-    .main-content h1 {
-      font-size: 1rem;
-    }
-  
-    .main-content p {
-      font-size: .5rem;
-    }
-    .main-img1{
-      width: auto;
-    }
 
-}
+
 main{
   width: 80%;
   margin: 0 auto;
 }
 .main{
-  /* display: grid; */
-  display: flex;
+  display: grid;
+  /* display: flex; */
   gap: 20px;
-  /* max-width: 80%; */
-  /* grid-template-areas: 
-  "img1 img2 main-content"
-  "img3 img4 main-content";
-   */
+    border: 1px solid red;
+   grid-template-areas: 
+  "main-img main-content"
+  "main-img main-content";
+  /* grid-template-rows: repeat(1,1fr);
+  grid-template-columns: repeat(2,1fr); */
+}
    
 
-}
+
 .main-img{
   display: grid;
   width: auto;
   gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-area: main-img;
+    grid-template-areas:
+        "main-div1 main-div2"
+        "main-div3 main-div4"
+    
+  /* grid-template-columns: repeat(2, 1fr); */
     /* grid-template-rows: repeat(2, 1fr); */
 
 }
+
+ .main-div1 {
+   grid-area: main-div1;
+ }
+
+ .main-div2 {
+   grid-area: main-div2;
+ }
+
+ .main-div3 {
+   grid-area: main-div3;
+ }
+
+ .main-div4 {
+   grid-area: main-div4;
+ }
 .main-img1{
-  /* grid-area: img1; */
-   max-width: 100%; 
+  grid-area: img1;
+   max-width: auto; 
 
 }
 
 .main-img2 {
-  /* grid-area: img2; */
-  max-width: 100%}
+  grid-area: img2;
+  max-width: auto;
+}
 .main-img3 {
-  /* grid-area: img3; */
-  max-width: 100%;}
+  grid-area: img3;
+  max-width: auto;}
 .main-img4 {
-  /* grid-area: img4; */
-  max-width: 100%;}
+  grid-area: img4;
+  max-width: auto;}
 .main-content{
   grid-area: main-content;
   display: flex;
@@ -187,7 +163,7 @@ main{
   justify-content: center;
   align-items: start;
   gap: 20px;
-width: 50%;
+width: 80%;
   margin: 0 auto;
 }
 .main-content  h1{
@@ -196,3 +172,75 @@ width: 50%;
 .main-content p{
   font-size: 1rem;
 }
+
+
+/*Feture Area start*/
+.feature{
+  display: flex;
+  
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+  margin: 0px 0;
+  border: 1px solid red;
+}
+.feature-content{
+  flex: 1;
+  gap: 20px;
+  border: 2px solid rgb(125, 135, 59);
+}
+
+.feature-heading{
+  /* width: 5px;
+  height: 4rem; */
+    font-size: 2rem;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 10px;
+    margin-bottom: 20px;
+    
+
+}
+
+.feature p{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #727272;;
+}
+.feature-card-1,.feature-card-2,.feature-card-3,.feature-card-4{
+  margin-top: 20px;
+  /* width: 100%; */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  
+  padding: 30px;
+      flex-basis: 0;
+}
+.feature-img{
+  flex: 1;
+  max-height: 100%;
+  border: 2px solid blue;
+  
+}
+.feature-img img{
+  max-width: 100%;
+  /* max-height: 100%;  */
+  margin: 50px 0px ;
+  /* overflow: hidden; */
+}
+.feature-img h1{
+ padding: 50px;
+ width: 200px;
+ height: 100px;
+ font-size: 1.5rem;
+ color: white;
+ background-color: #FF900E;
+ text-align: center;
+ margin-left: -80px;
+ margin-top: -200px;
+ position: absolute;
+ 
+}
+.feature-img-span{
+  font-size: 4rem;
+}
+
+/* Feature Area End */
