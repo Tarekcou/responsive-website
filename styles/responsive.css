@@ -1,7 +1,6 @@
 @media screen and (max-width:576px) {
   .btn-primary {
-    width: 120px;
-    height: 40px;
+    padding: 10px 25px;
     font-size: .75rem;
   }
 
@@ -13,7 +12,7 @@
   .banner-content h1,
   .nav-heading {
     max-width: 80%;
-    font-size: 2rem;
+    font-size: 1.3rem;
 
   }
 
@@ -33,6 +32,7 @@
   .banner-img {
     max-width: 80%;
   }
+  
 
   .main {
     grid-template-areas:
@@ -45,37 +45,34 @@
   .main-img {
     width:  auto;
     grid-template-areas:
-      "main-div1"
-      "main-div2"
-      "main-div3"
-      "main-div4"
+      "img1"
+      "img2"
+      "img3"
+      "img4"
   }
 
   .main-img1 {
     grid-area: img1;
-    max-width: 100%;
-    border: 2px solid blue;
+    
 
   }
 
   .main-img2 {
     grid-area: img2;
-    max-width: 100%;
+
   }
 
   .main-img3 {
     grid-area: img3;
-    max-width: 100%;
   }
 
   .main-img4 {
     grid-area: img4;
-    max-width: 100%;
   }
 
-}
 
 .feature{
+  margin: 20px 0px;
   flex-direction: column;
   align-items: center;
   gap: 20px;
@@ -85,16 +82,45 @@
   margin: 0px;
 }
 .feature-img h1{
-  padding: 0;
+  padding: 10px;
   margin: 0 auto;
   font-size: 1rem;
     width: 200px;
-    position: relative;;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
 
 }
 .feature-img-span{
   font-size: 2rem;
 
 }
+.badges{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+}
+.badge1,
+.badge2,
+.badge3,
+.badge4 {
+margin: 10px;
+padding: 10px;
 
+}
+
+.sponspors-company{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  
+}
+.sponspors-company img{
+  width: 80%;
+}
+
+
+
+}
 /* Responsive end */

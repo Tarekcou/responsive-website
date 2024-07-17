@@ -3,23 +3,29 @@
 }
 :root{
   --primary-color: #FF900E;
+  --secodary-color: #424242;
 }
+
 .primary-text-color{
   font-weight: 800;
 }
+
 .secondary-text-color{
-  font-weight: 500;
-  color: #424242;
   font-size: 1rem;
+    font-weight: 500;
+    color: #727272;
+    ;
 }
 .btn-primary{
-  width: 180px;
-  height: 60px;
+  width: auto;
+  height: auto;
+  padding: 20px 30px;
   background-color: #FF900E;
   border: none;
   border-radius: 5px;
   color: white;
   font-size: 1.25rem;
+  text-align: center;
 }
 .primary-background-color{
   background-color: #FFF4E7;
@@ -84,8 +90,9 @@
   margin: 0 auto;
 }
 .banner-img{
-  max-width: 80%;
+  max-width: 100%;
   /* height: 80%; */
+    object-fit: cover;
 }
 .banner-p{
   text-align: center;
@@ -101,7 +108,6 @@ main{
   display: grid;
   /* display: flex; */
   gap: 20px;
-    border: 1px solid red;
    grid-template-areas: 
   "main-img main-content"
   "main-img main-content";
@@ -115,47 +121,34 @@ main{
   display: grid;
   width: auto;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
   grid-area: main-img;
     grid-template-areas:
-        "main-div1 main-div2"
-        "main-div3 main-div4"
+        "img1 img2"
+        "img3 img4"
     
   /* grid-template-columns: repeat(2, 1fr); */
     /* grid-template-rows: repeat(2, 1fr); */
 
 }
-
- .main-div1 {
-   grid-area: main-div1;
- }
-
- .main-div2 {
-   grid-area: main-div2;
- }
-
- .main-div3 {
-   grid-area: main-div3;
- }
-
- .main-div4 {
-   grid-area: main-div4;
- }
 .main-img1{
   grid-area: img1;
-   max-width: auto; 
+   max-width: 100%; 
 
 }
 
 .main-img2 {
   grid-area: img2;
-  max-width: auto;
+  max-width: 100%;
+    object-fit: cover;
 }
 .main-img3 {
   grid-area: img3;
-  max-width: auto;}
+  max-width: 100%;}
 .main-img4 {
   grid-area: img4;
-  max-width: auto;}
+  max-width: 100%;}
 .main-content{
   grid-area: main-content;
   display: flex;
@@ -176,18 +169,15 @@ width: 80%;
 
 /*Feture Area start*/
 .feature{
-  display: flex;
-  
+  display: flex; 
   justify-content: space-evenly;
   align-items: center;
   gap: 100px;
   margin: 0px 0;
-  border: 1px solid red;
 }
 .feature-content{
   flex: 1;
   gap: 20px;
-  border: 2px solid rgb(125, 135, 59);
 }
 
 .feature-heading{
@@ -217,7 +207,6 @@ width: 80%;
 .feature-img{
   flex: 1;
   max-height: 100%;
-  border: 2px solid blue;
   
 }
 .feature-img img{
@@ -244,3 +233,62 @@ width: 80%;
 }
 
 /* Feature Area End */
+
+/* Facts Start*/
+.facts{
+  margin: 40px 0;
+}
+
+.badges{
+  display: flex;
+  justify-content: space-around;
+}
+.badge1,.badge2,.badge3,.badge4{
+  border: 1px solid rgb(240, 89, 89);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding: 50px;
+  margin: 20px;
+}
+
+/*Facts End*/
+
+/* Sponsors Name  starts*/
+.sponspors{
+
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  gap: 30px;
+  
+}
+.sponspors-heading{
+  margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.sponspors-company{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Sponsors Name  Ends*/
+
+
+footer {
+  padding: 20px 200px;
+  margin: 30px auto;
+
+}
+footer p{
+  text-align: center;
+}
